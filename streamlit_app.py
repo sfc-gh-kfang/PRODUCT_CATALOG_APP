@@ -6,6 +6,7 @@ streamlit.title('Zena\'\s Amazing Athleisure Catalog')
 # connect to snowflake
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
+st.stop()
 
 # run a snowflake query and put it all in a var called my_catalog
 my_cur.execute("SELECT COLOR_OR_STYLE FROM CATALOG_FOR_WEBSITE")
